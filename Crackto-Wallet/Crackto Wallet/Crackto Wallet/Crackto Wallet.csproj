@@ -123,6 +123,10 @@
     <Compile Include="CoinType.cs" />
     <Compile Include="FileManager\FileManager.cs" />
     <Compile Include="FileManager\FileManagerJSON.cs" />
+    <Compile Include="Orders\LimitOrder.cs" />
+    <Compile Include="Orders\MarketOrder.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\TransactionType.cs" />
     <Compile Include="Screens\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
