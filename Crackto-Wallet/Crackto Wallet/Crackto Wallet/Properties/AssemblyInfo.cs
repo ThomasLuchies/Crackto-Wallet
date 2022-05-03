@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Crackto Wallet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Procom")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Crackto Wallet")]
-[assembly: AssemblyCopyright("Copyright © Procom 2022")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

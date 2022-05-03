@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="7b27a532-f669-4fab-9bc0-ebd408432452"
-    Publisher="CN=Gebruiker"
+    Name="94df7036-07af-4b93-8c77-15b6502ed989"
+    Publisher="CN=thoma"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="7b27a532-f669-4fab-9bc0-ebd408432452" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="94df7036-07af-4b93-8c77-15b6502ed989" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Crackto Wallet</DisplayName>
-    <PublisherDisplayName>Gebruiker</PublisherDisplayName>
+    <PublisherDisplayName>thoma</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
