@@ -5,7 +5,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "05314ae1-e3e2-4c00-9bbe-38b1d3599f68": {
+      "ProjectGuid": "05314ae1-e3e2-4c00-9bbe-38b1d3599f68",
+      "DisplayName": "Crackto Wallet",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }
