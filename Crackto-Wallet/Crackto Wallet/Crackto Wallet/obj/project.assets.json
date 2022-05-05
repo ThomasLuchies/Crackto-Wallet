@@ -4098,7 +4098,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -8159,18 +8159,30 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Marvin\\.nuget\\packages\\": {},
+>>>>>>> a3b42152c97964f1044cd5b28644441caf4351be
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
       "projectName": "Crackto Wallet",
       "projectPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+      "projectName": "Crackto Wallet",
+      "projectPath": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+      "packagesPath": "C:\\Users\\Marvin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+>>>>>>> a3b42152c97964f1044cd5b28644441caf4351be
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8178,7 +8190,11 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Marvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> a3b42152c97964f1044cd5b28644441caf4351be
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

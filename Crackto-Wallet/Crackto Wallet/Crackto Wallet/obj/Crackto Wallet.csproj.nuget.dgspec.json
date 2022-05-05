@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {}
+    "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {
+    "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+        "projectUniqueName": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
         "projectName": "Crackto Wallet",
-        "projectPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+        "projectPath": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+        "packagesPath": "C:\\Users\\Marvin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marvin\\Source\\Repos\\ThomasLuchies\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
