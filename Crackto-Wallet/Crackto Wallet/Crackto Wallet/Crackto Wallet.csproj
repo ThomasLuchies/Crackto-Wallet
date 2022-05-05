@@ -125,9 +125,8 @@
     <Compile Include="FileManager\FileManagerJSON.cs" />
     <Compile Include="Orders\LimitOrder.cs" />
     <Compile Include="Orders\MarketOrder.cs" />
-    <Compile Include="Orders\MarketOrderType.cs" />
     <Compile Include="Orders\Order.cs" />
-    <Compile Include="Orders\TimeInForceType.cs" />
+    <Compile Include="Orders\OrderType.cs" />
     <Compile Include="Orders\TransactionType.cs" />
     <Compile Include="Screens\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>

@@ -8159,7 +8159,11 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\Kariem\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
@@ -8167,11 +8171,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
       "projectName": "Crackto Wallet",
       "projectPath": "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
       "packagesPath": "C:\\Users\\Kariem\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+      "projectName": "Crackto Wallet",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8180,7 +8192,11 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\Kariem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

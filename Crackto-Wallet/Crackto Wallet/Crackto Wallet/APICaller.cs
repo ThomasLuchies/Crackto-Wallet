@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Crackto_Wallet.Orders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -15,15 +16,45 @@ namespace Crackto_Wallet
         private string SecretKey = "IUAEy4p7ZTlY8cPCqukCCg3ACDRy09pOyxlMvJA4IdpCbBn3DKd2DSjglkShAGYf";
 
 
-        public Task PlaceOrder()
+        public string PlaceOrder(Order order)
         {
+            string endPoint = "/api/v3/order";
+
+            Dictionary<string, string> reqParams = new Dictionary<string, string>()
+            {
+                {"symbol", order.CoinType.ToString()},
+                {"side", order.TransactionType.ToString() },
+                {"type", order.OrderType.ToString() },
+                {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
+            };
+
+            if (order is LimitOrder limitOrder)
+            {
+                reqParams.Add("quantity", limitOrder.Amount.ToString());
+                reqParams.Add("price", limitOrder.Value.ToString());
+                reqParams.Add("timeInForce", limitOrder.TimeInForce.ToString());
+            }
+            else if (order is MarketOrder marketOrder)
+            {
+                reqParams.Add("quantity", marketOrder.Quantity.ToString());
+                reqParams.Add("quoteOrderQty", marketOrder.QuantityType.ToString());
+            }
+            Task<string> result = APICall(reqParams, endPoint, true);
+
             return null;
         }
 
-        public Task GetBalance()
+        public string GetBalance()
         {
-            
-            return null;
+            string endPoint = APIURL + "/api/v3/account";
+
+            Dictionary<string, string> reqParams = new Dictionary<string, string>()
+            {
+                {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
+            };
+            Task<string> result = APICall(reqParams, endPoint, true);
+
+            return result.IsCompletedSuccessfully ? result.Result : null;
         }
 
         public string GetActiveOrders()

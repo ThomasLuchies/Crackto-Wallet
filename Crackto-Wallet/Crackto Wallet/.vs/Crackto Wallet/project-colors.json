@@ -10,7 +10,22 @@
       "ProjectGuid": "05314ae1-e3e2-4c00-9bbe-38b1d3599f68",
       "DisplayName": "Crackto Wallet",
       "ColorIndex": 0
+    },
+    "51e6ae1b-ab97-4c8a-9186-880655e5790e": {
+      "ProjectGuid": "51e6ae1b-ab97-4c8a-9186-880655e5790e",
+      "DisplayName": "test",
+      "ColorIndex": 1
+    },
+    "6344697a-053d-4491-b78e-78a5095c576c": {
+      "ProjectGuid": "6344697a-053d-4491-b78e-78a5095c576c",
+      "DisplayName": "testconsole",
+      "ColorIndex": 2
+    },
+    "825f3441-9af3-46c3-b9d6-538704067777": {
+      "ProjectGuid": "825f3441-9af3-46c3-b9d6-538704067777",
+      "DisplayName": "Crackto Wallet Console",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 4
 }

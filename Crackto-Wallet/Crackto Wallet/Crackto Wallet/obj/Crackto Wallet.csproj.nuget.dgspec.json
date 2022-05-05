@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
         "packagesPath": "C:\\Users\\Kariem\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Kariem\\OneDrive\\Documenten\\GitHub\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+=======
+    "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+        "projectName": "Crackto Wallet",
+        "projectPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\Crackto Wallet.csproj",
+        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gebruiker\\Documents\\Crackto-Wallet\\Crackto-Wallet\\Crackto Wallet\\Crackto Wallet\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
