@@ -8,24 +8,37 @@ namespace Crackto_Wallet.Orders
 {
     class LimitOrder : Order
     {
-        private double value;
+        private double quantity;
+        private TimeInForceType timeInForce;
 
-        public LimitOrder(CoinType coinType, double amount, TransactionType transactionType, double value) : base(coinType, amount, transactionType)
+        public LimitOrder(CoinType coinType, double price, TransactionType transactionType, double quantity, TimeInForceType tif) : base(coinType, price, transactionType)
         {
-            this.value = value;
+            this.quantity = quantity;
+            timeInForce = tif;
         }
 
-        public double getValue()
+        public double getQuantity()
         {
-            return value;
+            return quantity;
         }
 
-        public void setValue(double value)
+        public TimeInForceType GetTimeInForce()
         {
-            if (value < 0)
-                throw new ArgumentOutOfRangeException("value");
+            return timeInForce;
+        }
 
-            this.value = value;
+        public void setQuantity(double quantity)
+        {
+            if (quantity < 0)
+                throw new ArgumentOutOfRangeException("quantity");
+
+            this.quantity = quantity;
+        }
+
+        public void setTimeInForce(TimeInForceType tif)
+        {
+            if (!timeInForce.Equals(tif))
+                timeInForce = tif;
         }
     }
 }

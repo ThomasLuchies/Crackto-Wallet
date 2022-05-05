@@ -8,13 +8,13 @@ namespace Crackto_Wallet.Orders
 {
     class MarketOrder : Order
     {
+        private MarketOrderType marketType;
         private double quantity;
-        private string quantityType; //TOTAL or AMOUNT
 
-        public MarketOrder(CoinType coinType, double amount, TransactionType transactionType, double quantity, string quantityType) : base(coinType, amount, transactionType)
+        public MarketOrder(CoinType coinType, double price, TransactionType transactionType, MarketOrderType marketType, double quantity) : base(coinType, price, transactionType)
         {
+            this.marketType = marketType;
             this.quantity = quantity;
-            this.quantityType = quantityType;
         }
 
         public double getQuantity()
@@ -22,9 +22,9 @@ namespace Crackto_Wallet.Orders
             return quantity;
         }
 
-        public string getQuantityType()
+        public MarketOrderType getMarketType()
         {
-            return quantityType;
+            return marketType;
         }
 
         public void setQuantity(double quantity)
@@ -35,9 +35,9 @@ namespace Crackto_Wallet.Orders
             this.quantity = quantity;
         }
 
-        public void setQuantityType(string quantityType)
+        public void setMarketType(MarketOrderType marketType)
         {
-            this.quantityType = quantityType;
+            this.marketType = marketType;
         }
     }
 }
