@@ -9,7 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="WIP" VerticalAlignment="Center" FontSize="72"/>
 
     </Grid>
 </Page>

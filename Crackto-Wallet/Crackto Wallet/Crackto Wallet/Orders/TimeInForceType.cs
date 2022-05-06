@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Crackto_Wallet.Orders
 {
-    enum TimeInForceType
+    public enum TimeInForceType
     {
         GTC,
         IOC,

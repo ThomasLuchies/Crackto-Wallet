@@ -30,18 +30,24 @@ namespace Crackto_Wallet
 
             if (order is LimitOrder limitOrder)
             {
-                reqParams.Add("quantity", limitOrder.Amount.ToString());
-                reqParams.Add("price", limitOrder.Value.ToString());
+                reqParams.Add("quantity", limitOrder.Quantity.ToString());
+                reqParams.Add("price", limitOrder.Amount.ToString());
                 reqParams.Add("timeInForce", limitOrder.TimeInForce.ToString());
             }
             else if (order is MarketOrder marketOrder)
             {
-                reqParams.Add("quantity", marketOrder.Quantity.ToString());
-                reqParams.Add("quoteOrderQty", marketOrder.QuantityType.ToString());
+                if(marketOrder.MarketType.Equals(MarketOrderType.QUOTE_ORDER_QTY))
+                {
+                    reqParams.Add("quoteOrderQty", marketOrder.MarketType.ToString());
+                }
+                else if(marketOrder.MarketType.Equals(MarketOrderType.QUANTITY))
+                {
+                    reqParams.Add("quantity", marketOrder.Quantity.ToString());
+                }
             }
             Task<string> result = APICall(reqParams, endPoint, true);
 
-            return null;
+            return result.IsCompletedSuccessfully ? result.Result : null;
         }
 
         public string GetBalance()
