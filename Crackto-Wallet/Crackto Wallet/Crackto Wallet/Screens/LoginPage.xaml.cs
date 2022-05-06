@@ -67,6 +67,8 @@ namespace Crackto_Wallet.Screens
             string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
 
             Debug.WriteLine(text);
+
+            this.Frame.Navigate(typeof(MainPage));
         }
         public class Keys
         {

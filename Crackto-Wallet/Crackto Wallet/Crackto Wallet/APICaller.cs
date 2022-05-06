@@ -13,9 +13,32 @@ namespace Crackto_Wallet
     public class APICaller
     {
         private string APIURL = "https://testnet.binance.vision";
-        private string APIKey = "iC8dgRNbVuc5nSvxvQPAVHhfIwKclB0hTaY2D9KaF2RhMBT8U94qjoGFtbc8LQJR";
-        private string SecretKey = "IUAEy4p7ZTlY8cPCqukCCg3ACDRy09pOyxlMvJA4IdpCbBn3DKd2DSjglkShAGYf";
+        private string APIKey;
+        private string SecretKey;
 
+        public APICaller()
+        {
+            ReadKeys();
+        }
+
+        public async void ReadKeys()
+        {
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile = await storageFolder.GetFileAsync("apikeys.json");
+            string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            Keys keysArr = serializer.Deserialize<Keys>(text);
+
+            this.APIKey = keysArr.apikey;
+            this.SecretKey = keysArr.secretkey;
+        }
+
+        public class Keys
+        {
+            public string apikey;
+            public string secretkey;
+        }
 
         public string PlaceOrder(Order order)
         {

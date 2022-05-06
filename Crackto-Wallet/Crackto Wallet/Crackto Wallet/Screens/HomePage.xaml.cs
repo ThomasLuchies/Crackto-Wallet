@@ -39,9 +39,9 @@ namespace Crackto_Wallet
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             APICaller aPICaller = new APICaller();
-            var test = apiCaller.PlaceOrder(new MarketOrder(CoinType.BTCBUSD, 800000, TransactionType.BUY, MarketOrderType.QUANTITY, 23));
+            var test = apiCaller.GetCoinValue(CoinType.BTCBUSD);
 
-            testBlock.Text = test;
+            testBlock.Text = test.ToString();
 
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
