@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid VerticalAlignment="Top" Height="100" Margin="10,0,-10,900">
+            <Button Click="Button_Click">Home</Button>
+            <Button Click="Button_Click_1"  Margin="63,0,0,0">Wallet</Button>
+            <Button Click="Button_Click_2" Margin="140,0,0,0">Orders</Button>
+        </Grid>
         <Grid Margin="485,92,0,500">
             <ComboBox Height="50" Width="190" Margin="75,100,0,0" PlaceholderText="Market order type">
                 <x:String>Quantity</x:String>

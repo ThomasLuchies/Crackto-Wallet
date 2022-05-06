@@ -10,16 +10,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
 
-    <Grid x:Name="mainGrid">
-        <NavigationView x:Name="Navigation" SelectedItem="Home" SelectionChanged="Navigation_SelectionChanged" PaneDisplayMode="Top" IsSettingsVisible="false" IsBackButtonVisible="Collapsed">
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" x:Name="Home" Width="200" HorizontalAlignment="center" FontSize="24"/>
-                <NavigationViewItem Content="Wallet" x:Name="Wallet" Width="200" HorizontalAlignment="center" FontSize="24"/>
-                <NavigationViewItem Content="Orders" x:Name="Orders" Width="200" HorizontalAlignment="center" FontSize="24"/>
-            </NavigationView.MenuItems>
-            <TextBlock x:Name="testBlock" HorizontalAlignment="Left" Margin="468,267,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        </NavigationView>
 
+    <Grid x:Name="mainGrid">
+        <Grid VerticalAlignment="Top" Height="100" Margin="10,0,-10,900">
+            <Button Click="Button_Click">Home</Button>
+            <Button Click="Button_Click_1"  Margin="63,0,0,0">Wallet</Button>
+            <Button Click="Button_Click_2" Margin="140,0,0,0">Orders</Button>
+        </Grid>
         <Charting:Chart x:Name="LineChart" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,548,0,0" Width="800" Height="400">
             <Charting:LineSeries Title="Cryptoname Price Chart" Margin="0" IndependentValuePath="Name" DependentValuePath="Price" IsSelectionEnabled="True">
             </Charting:LineSeries>

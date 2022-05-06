@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using WinRTXamlToolkit.Controls.DataVisualization.Charting;
+using Crackto_Wallet.Screens;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -35,16 +36,10 @@ namespace Crackto_Wallet
             this.apiCaller = new APICaller();
         }
 
-        private void Navigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
-        {
-        }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             APICaller aPICaller = new APICaller();
             var test = apiCaller.GetCoinValue(CoinType.BTCBUSD);
-
-            testBlock.Text = test.ToString();
 
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -67,17 +62,37 @@ namespace Crackto_Wallet
                 *(LineChart.Series[0] as LineSeries).ItemsSource = lstSource;*/
         }
 
-/*
-        async Task Main()
+        private void Navigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            await DoStuff();
+
         }
-        async Task DoStuff()
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(1000);
-            ((LineSeries)LineChart.Series[0]).ItemsSource = null;
-            ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;
-            throw new Exception();
-        }*/
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Wallet));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderPage));
+        }
+
+        /*
+                async Task Main()
+                {
+                    await DoStuff();
+                }
+                async Task DoStuff()
+                {
+                    await Task.Delay(1000);
+                    ((LineSeries)LineChart.Series[0]).ItemsSource = null;
+                    ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;
+                    throw new Exception();
+                }*/
     }
 }
