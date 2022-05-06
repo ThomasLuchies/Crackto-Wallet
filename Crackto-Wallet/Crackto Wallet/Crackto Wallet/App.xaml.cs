@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Crackto_Wallet.Screens;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Crackto_Wallet.Screens;
 
 namespace Crackto_Wallet
 {
@@ -69,7 +71,7 @@ namespace Crackto_Wallet
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(OrderPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
