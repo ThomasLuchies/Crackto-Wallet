@@ -1,4 +1,5 @@
 ﻿using Crackto_Wallet.Orders;
+using Nancy.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,7 +77,7 @@ namespace Crackto_Wallet
             return result.IsCompletedSuccessfully ? result.Result : null;
         }
 
-        public string GetCoinValue(CoinType coinType)
+        public double GetCoinValue(CoinType coinType)
         {
             string endPoint = APIURL + "/api/v3/ticker/price";
             Dictionary<string, string> reqParams= new Dictionary<string, string>()
@@ -84,9 +85,18 @@ namespace Crackto_Wallet
                 { "symbol", coinType.ToString() }
             };
             Task<string> result = APICall(reqParams, endPoint, false);
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            CoinValueResult resultArr = serializer.Deserialize<CoinValueResult>(result.Result);
 
-            return result.Result;
+            return resultArr.price;
         }
+
+        public class CoinValueResult
+        {
+            public string symbol;
+            public double price;
+        }
+
 
         public string CreateHmacSignature(string inputs)
         {

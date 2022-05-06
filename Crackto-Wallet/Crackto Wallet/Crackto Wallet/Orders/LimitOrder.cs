@@ -19,7 +19,7 @@ namespace Crackto_Wallet.Orders
                 if (value < 0)
                     throw new ArgumentOutOfRangeException("value");
 
-                value = value;
+                quantity = value;
             }
         }
 
