@@ -5,14 +5,10 @@
     xmlns:local="using:Crackto_Wallet.Screens"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,548,0,0" Width="800" Height="400">
-            <Charting:LineSeries Title="Cryptoname Price Chart" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True">
-            </Charting:LineSeries>
-        </Charting:Chart>
+
     </Grid>
 </Page>
