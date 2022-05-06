@@ -10,7 +10,7 @@ namespace Crackto_Wallet
     public class Crypto
     {
         public String Name { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
     }
     internal class Graph
     {

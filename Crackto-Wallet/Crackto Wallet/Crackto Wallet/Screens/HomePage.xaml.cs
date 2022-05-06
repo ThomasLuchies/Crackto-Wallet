@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using System.Timers;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,6 +25,8 @@ namespace Crackto_Wallet
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        List<Crypto> lstSource = new List<Crypto>();
+        APICaller aPICaller = new APICaller();
         private APICaller apiCaller;
         public MainPage()
         {
@@ -46,19 +49,32 @@ namespace Crackto_Wallet
             aTimer.Enabled = true;
             LoadChartContents();
         }
-
-        List<Crypto> lstSource = new List<Crypto>();
-        APICaller aPICaller = new APICaller();
         private void LoadChartContents()
         {
-            lstSource.Add(new Crypto() { Name = DateTime.Now.ToString("hh:mm:ss"), Price = Convert.ToInt32(aPICaller.GetCoinValue(CoinType.BTCBUSD)) });
+            lstSource.Add(new Crypto() { Name = DateTime.Now.ToString("hh:mm:ss"), Price = (aPICaller.GetCoinValue(CoinType.BTCBUSD)) });
             (LineChart.Series[0] as LineSeries).ItemsSource = lstSource;
         }
+
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            lstSource.Add(new Crypto() { Name = DateTime.Now.ToString("hh:mm:ss"), Price = Convert.ToInt32(aPICaller.GetCoinValue(CoinType.BTCBUSD)) });
-            (LineChart.Series[0] as LineSeries).ItemsSource = null;
-            /*            (LineChart.Series[0] as LineSeries).ItemsSource = lstSource;*/
+            lstSource.Add(new Crypto() { Name = DateTime.Now.ToString("hh:mm:ss"), Price = (aPICaller.GetCoinValue(CoinType.BTCBUSD)) });
+            /*  ((LineSeries)LineChart.Series[0]).ItemsSource = null;
+                *  ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;            
+                *          
+                *(LineChart.Series[0] as LineSeries).ItemsSource = lstSource;*/
         }
+
+/*
+        async Task Main()
+        {
+            await DoStuff();
+        }
+        async Task DoStuff()
+        {
+            await Task.Delay(1000);
+            ((LineSeries)LineChart.Series[0]).ItemsSource = null;
+            ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;
+            throw new Exception();
+        }*/
     }
 }
