@@ -18,7 +18,7 @@
             <Button Click="Button_Click_2" Margin="140,0,0,0">Orders</Button>
         </Grid>
         <Charting:Chart x:Name="LineChart" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,548,0,0" Width="800" Height="400">
-            <Charting:LineSeries Title="Cryptoname Price Chart" Margin="0" IndependentValuePath="Name" DependentValuePath="Price" IsSelectionEnabled="True">
+            <Charting:LineSeries Title="BTCBUSD Price Chart" Margin="0" IndependentValuePath="Name" DependentValuePath="Price" IsSelectionEnabled="True">
             </Charting:LineSeries>
         </Charting:Chart>
     </Grid>
