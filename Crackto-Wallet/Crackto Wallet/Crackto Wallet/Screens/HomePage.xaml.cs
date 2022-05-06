@@ -63,21 +63,8 @@ namespace Crackto_Wallet
             lstSource.Add(new Crypto() { Name = DateTime.Now.ToString("hh:mm:ss"), Price = (aPICaller.GetCoinValue(CoinType.BTCBUSD)) });
             /*  ((LineSeries)LineChart.Series[0]).ItemsSource = null;
                 *  ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;            
-                *          
+                *          of
                 *(LineChart.Series[0] as LineSeries).ItemsSource = lstSource;*/
         }
-
-/*
-        async Task Main()
-        {
-            await DoStuff();
-        }
-        async Task DoStuff()
-        {
-            await Task.Delay(1000);
-            ((LineSeries)LineChart.Series[0]).ItemsSource = null;
-            ((LineSeries)LineChart.Series[0]).ItemsSource = lstSource;
-            throw new Exception();
-        }*/
     }
 }
