@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Crackto_Wallet.Orders
 {
-    enum MarketOrderType
+    public enum MarketOrderType
     {
         QUANTITY,
         QUOTE_ORDER_QTY

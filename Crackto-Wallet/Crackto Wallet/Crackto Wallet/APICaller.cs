@@ -56,6 +56,7 @@ namespace Crackto_Wallet
 
             Dictionary<string, string> reqParams = new Dictionary<string, string>()
             {
+                {"recvWindow", "5000" },
                 {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
             };
             Task<string> result = APICall(reqParams, endPoint, true);
@@ -75,7 +76,7 @@ namespace Crackto_Wallet
             return result.IsCompletedSuccessfully ? result.Result : null;
         }
 
-        public double GetCoinValue(CoinType coinType)
+        public string GetCoinValue(CoinType coinType)
         {
             string endPoint = APIURL + "/api/v3/ticker/price";
             Dictionary<string, string> reqParams= new Dictionary<string, string>()
@@ -84,17 +85,18 @@ namespace Crackto_Wallet
             };
             Task<string> result = APICall(reqParams, endPoint, false);
 
-            return result.IsCompletedSuccessfully ? Convert.ToDouble(result.Result) : 0;
+            return result.Result;
         }
 
         public string CreateHmacSignature(string inputs)
         {
-            using (HMACSHA256 hmacsha256 = new HMACSHA256(Encoding.UTF8.GetBytes(SecretKey)))
-            {
-                var hash = hmacsha256.ComputeHash(Encoding.UTF8.GetBytes(inputs));
-                return Convert.ToBase64String(hash);
-            }
-            return null;
+            byte[] keyBytes = Encoding.UTF8.GetBytes(SecretKey);
+            byte[] queryStringBytes = Encoding.UTF8.GetBytes(inputs);
+            HMACSHA256 hmacsha256 = new HMACSHA256(keyBytes);
+
+            byte[] bytes = hmacsha256.ComputeHash(queryStringBytes);
+
+            return BitConverter.ToString(bytes).Replace("-", "").ToLower();
         }
 
         public async Task<string> APICall(Dictionary<string, string> reqParams, string endPoint, bool signature)
@@ -115,10 +117,16 @@ namespace Crackto_Wallet
 
             using (var client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync((endPoint + paramsString));
+                client.DefaultRequestHeaders.Add("X-MBX-APIKEY", APIKey);
+                HttpResponseMessage response = client.GetAsync(endPoint + paramsString).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    return response.Content.ToString();
+                    return await response.Content.ReadAsStringAsync();
+                }
+                else
+                {
+
+                    return await response.Content.ReadAsStringAsync();
                 }
             }
 

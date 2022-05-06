@@ -30,8 +30,9 @@ namespace Crackto_Wallet
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            APICaller apiCaller = new APICaller();
-            Console.WriteLine(apiCaller.GetActiveOrders());
+
+            
+
         }
 
         /// <summary>
