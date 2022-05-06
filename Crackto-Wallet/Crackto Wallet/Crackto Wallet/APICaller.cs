@@ -26,13 +26,14 @@ namespace Crackto_Wallet
                 {"symbol", order.CoinType.ToString()},
                 {"side", order.TransactionType.ToString() },
                 {"type", order.OrderType.ToString() },
-                {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
+                {"recvWindow", "60000" },
+                {"timestamp", (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()).ToString()}
             };
 
             if (order is LimitOrder limitOrder)
             {
                 reqParams.Add("quantity", limitOrder.Quantity.ToString());
-                reqParams.Add("price", limitOrder.Amount.ToString());
+                reqParams.Add("price", limitOrder.Price.ToString());
                 reqParams.Add("timeInForce", limitOrder.TimeInForce.ToString());
             }
             else if (order is MarketOrder marketOrder)
@@ -57,8 +58,8 @@ namespace Crackto_Wallet
 
             Dictionary<string, string> reqParams = new Dictionary<string, string>()
             {
-                {"recvWindow", "5000" },
-                {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
+                {"recvWindow", "60000" },
+                {"timestamp", (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()).ToString()}
             };
             Task<string> result = APICall(reqParams, endPoint, true);
 
@@ -70,7 +71,8 @@ namespace Crackto_Wallet
             string endPoint = APIURL + "/api/v3/openOrders";
             Dictionary<string, string> reqParams = new Dictionary<string, string>()
             {
-                {"timestamp", ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds).ToString()}
+                {"recvWindow", "60000" },
+                {"timestamp", (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()).ToString()}
             };
             Task<string> result = APICall(reqParams, endPoint, true);
 
@@ -111,15 +113,17 @@ namespace Crackto_Wallet
 
         public async Task<string> APICall(Dictionary<string, string> reqParams, string endPoint, bool signature)
         {
-            string paramsString = "?";
+            string paramsString = "";
 
             int count = 0;
             foreach(KeyValuePair<string, string> reqParam in reqParams)
             {
                 paramsString += reqParam.Key + "=" + reqParam.Value;
 
-                if(count != 0 || count != reqParams.Count - 1)
+                if(count != (reqParams.Count - 1))
                     paramsString += "&";
+
+                count++;
             }
 
             if(signature)
@@ -128,14 +132,13 @@ namespace Crackto_Wallet
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("X-MBX-APIKEY", APIKey);
-                HttpResponseMessage response = client.GetAsync(endPoint + paramsString).Result;
+                HttpResponseMessage response = client.GetAsync(endPoint + "?" + paramsString).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return await response.Content.ReadAsStringAsync();
                 }
                 else
                 {
-
                     return await response.Content.ReadAsStringAsync();
                 }
             }

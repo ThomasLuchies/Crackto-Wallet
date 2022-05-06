@@ -24,7 +24,7 @@ namespace Crackto_Wallet.Orders
         }
         public MarketOrderType MarketType { get { return marketType; } }
 
-        public MarketOrder(CoinType coinType, double price, TransactionType transactionType, MarketOrderType marketType, double quantity) : base(coinType, price, transactionType, OrderType.MARKET)
+        public MarketOrder(CoinType coinType, TransactionType transactionType, MarketOrderType marketType, double quantity) : base(coinType, transactionType, OrderType.MARKET)
         {
             this.marketType = marketType;
             this.quantity = quantity;
