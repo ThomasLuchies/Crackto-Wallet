@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Crackto_Wallet.Orders;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WinRTXamlToolkit.Controls.DataVisualization.Charting;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -35,7 +37,9 @@ namespace Crackto_Wallet
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            string test = apiCaller.GetBalance();
+            APICaller aPICaller = new APICaller();
+            var test = apiCaller.PlaceOrder(new MarketOrder(CoinType.BTCBUSD, 800000, TransactionType.BUY, MarketOrderType.QUANTITY, 23));
+
             testBlock.Text = test;
         }
     }
