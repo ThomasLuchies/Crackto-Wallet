@@ -123,6 +123,7 @@
     <Compile Include="CoinType.cs" />
     <Compile Include="FileManager\FileManager.cs" />
     <Compile Include="FileManager\FileManagerJSON.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Orders\LimitOrder.cs" />
     <Compile Include="Orders\MarketOrder.cs" />
     <Compile Include="Orders\MarketOrderType.cs" />
