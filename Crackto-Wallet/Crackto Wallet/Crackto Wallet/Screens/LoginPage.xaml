@@ -11,8 +11,8 @@
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Crackto Wallet"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" SelectionChanged="TextBlock_SelectionChanged" Text="Login:"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,500,0,0" TextWrapping="Wrap" Text="APIKEY" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" FontSize="36" Background="#66FFFFFF" Width="1053"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,592,0,0" TextWrapping="Wrap" Text="SECRETKEY" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" FontSize="36" Background="#66FFFFFF" Width="1052"/>
+        <TextBox x:Name="apikey" HorizontalAlignment="Center" Margin="0,500,0,0" TextWrapping="Wrap" Text="APIKEY" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" FontSize="36" Background="#66FFFFFF" Width="1053"/>
+        <TextBox x:Name="secretkey" HorizontalAlignment="Center" Margin="0,592,0,0" TextWrapping="Wrap" Text="SECRETKEY" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" FontSize="36" Background="#66FFFFFF" Width="1052"/>
         <Button Content="Log in" Margin="0,726,0,0" VerticalAlignment="Top" Height="64" Width="198" HorizontalAlignment="Center" Click="Button_Click" FontSize="24" Background="#3364F81D"/>
 
     </Grid>

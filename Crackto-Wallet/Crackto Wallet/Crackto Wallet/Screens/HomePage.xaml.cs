@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Crackto_Wallet.Orders;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,7 +41,9 @@ namespace Crackto_Wallet
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            string test = apiCaller.GetBalance();
+            APICaller aPICaller = new APICaller();
+            var test = apiCaller.PlaceOrder(new MarketOrder(CoinType.BTCBUSD, 800000, TransactionType.BUY, MarketOrderType.QUANTITY, 23));
+
             testBlock.Text = test;
 
             System.Timers.Timer aTimer = new System.Timers.Timer();

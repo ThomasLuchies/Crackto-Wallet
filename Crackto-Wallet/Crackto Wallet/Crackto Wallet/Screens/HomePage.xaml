@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid x:Name="mainGrid">
         <NavigationView x:Name="Navigation" SelectedItem="Home" SelectionChanged="Navigation_SelectionChanged" PaneDisplayMode="Top" IsSettingsVisible="false" IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Home" x:Name="Home" Width="200" HorizontalAlignment="center" FontSize="24"/>
