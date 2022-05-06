@@ -48,9 +48,22 @@ namespace Crackto_Wallet
 
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 10000;
+            aTimer.Interval = 5000;
             aTimer.Enabled = true;
             LoadChartContents();
+
+            var localTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(5000)
+            };
+            localTimer.Tick += (timer, f) =>
+            {
+                (timer as DispatcherTimer).Stop();
+                (LineChart.Series[0] as LineSeries).ItemsSource = null;
+                (LineChart.Series[0] as LineSeries).ItemsSource = lstSource;
+                localTimer.Start();
+            };
+            localTimer.Start();
         }
         private void LoadChartContents()
         {
