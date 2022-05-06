@@ -30,6 +30,18 @@ namespace Crackto_Wallet.Screens
         {
             this.InitializeComponent();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            AddCoinTypes();
+        }
 
+        private void AddCoinTypes()
+        {
+            foreach (var coinType in Enum.GetValues(typeof(CoinType)))
+            {
+                CoinType.Items.Add(coinType);
+            }
+            
+        }
     }
 }

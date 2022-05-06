@@ -10,6 +10,7 @@ namespace Crackto_Wallet.Orders
     {
         private double quantity;
         private TimeInForceType timeInForce;
+        private double price;
 
         public double Quantity
         {
@@ -23,12 +24,19 @@ namespace Crackto_Wallet.Orders
             }
         }
 
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+
         public TimeInForceType TimeInForce { get { return timeInForce; } }
 
-        public LimitOrder(CoinType coinType, double price, TransactionType transactionType, double quantity, TimeInForceType tif) : base(coinType, price, transactionType, OrderType.LIMIT)
+        public LimitOrder(CoinType coinType, TransactionType transactionType, double price, double quantity, TimeInForceType tif) : base(coinType, transactionType, OrderType.LIMIT)
         {
             this.quantity = quantity;
             timeInForce = tif;
+            this.price = price;
         }
     }
 }

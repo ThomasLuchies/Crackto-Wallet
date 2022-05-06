@@ -32,7 +32,7 @@ namespace Crackto_Wallet
             if (order is LimitOrder limitOrder)
             {
                 reqParams.Add("quantity", limitOrder.Quantity.ToString());
-                reqParams.Add("price", limitOrder.Amount.ToString());
+                reqParams.Add("price", limitOrder.Price.ToString());
                 reqParams.Add("timeInForce", limitOrder.TimeInForce.ToString());
             }
             else if (order is MarketOrder marketOrder)
